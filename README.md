@@ -34,6 +34,7 @@ Run in terminal
 ```
 composer require ajaminov/trip-sorter dev-master
 ```
+Requires  php: >=7.0
 
 
 ## How to execute
