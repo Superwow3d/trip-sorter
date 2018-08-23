@@ -14,14 +14,12 @@ try {
         ->setFlightNumber('MAU113')
         ->setGate('F')
         ->build();
-    $builder = new MovableBuilder();
     $cards[] = $builder->setFrom('Barcelona')
         ->setTo('Warsaw')
         ->byTrain()
         ->setSeat('23A')
         ->setTrainNumber('44')
         ->build();
-    $builder = new MovableBuilder();
     $cards[] = $builder->setFrom('Astana')
         ->setTo('Madrid')
         ->byAirplane()
@@ -30,7 +28,6 @@ try {
         ->addBaggage('123')
         ->setGate('T2')
         ->build();
-    $builder = new MovableBuilder();
     $cards[] = $builder->setFrom('Pavlodar')
         ->setTo('Astana')
         ->byBus()

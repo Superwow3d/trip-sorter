@@ -28,7 +28,6 @@ class SorterTest extends TestCase
                 ->setFlightNumber('44')
                 ->setGate('F')
                 ->build();
-            $builder = new MovableBuilder();
             $cards[] = $builder->setFrom('Madrid')
                 ->setTo('Warsaw')
                 ->byTrain()
@@ -55,7 +54,6 @@ class SorterTest extends TestCase
                 ->setFlightNumber('44')
                 ->setGate('F')
                 ->build();
-            $builder = new MovableBuilder();
             $cards[] = $builder->setFrom('Warsaw')
                 ->setTo('Barcelona')
                 ->byTrain()
@@ -82,7 +80,6 @@ class SorterTest extends TestCase
                 ->setFlightNumber('44')
                 ->setGate('F')
                 ->build();
-            $builder = new MovableBuilder();
             $cards[] = $builder->setFrom('Barcelona')
                 ->setTo('Madrid')
                 ->byTrain()
@@ -109,7 +106,6 @@ class SorterTest extends TestCase
                 ->setFlightNumber('MAU113')
                 ->setGate('F')
                 ->build();
-            $builder = new MovableBuilder();
             $cards[] = $builder->setFrom('Barcelona')
                 ->setTo('Warsaw')
                 ->byTrain()
@@ -165,14 +161,12 @@ class SorterTest extends TestCase
                 ->setFlightNumber('MAU113')
                 ->setGate('F')
                 ->build();
-            $builder = new MovableBuilder();
             $cards[] = $builder->setFrom('Barcelona')
                 ->setTo('Warsaw')
                 ->byTrain()
                 ->setSeat('23A')
                 ->setTrainNumber('44')
                 ->build();
-            $builder = new MovableBuilder();
             $cards[] = $builder->setFrom('Astana')
                 ->setTo('Madrid')
                 ->byAirplane()
@@ -182,7 +176,6 @@ class SorterTest extends TestCase
                 ->addBaggage('13')
                 ->setGate('T2')
                 ->build();
-            $builder = new MovableBuilder();
             $cards[] = $builder->setFrom('Pavlodar')
                 ->setTo('Astana')
                 ->byTrain()
