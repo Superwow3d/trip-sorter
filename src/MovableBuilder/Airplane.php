@@ -13,10 +13,10 @@ class Airplane
 
     /**
      * Airplane constructor.
-     * @param string $from
-     * @param string $to
+     * @param null|string $from
+     * @param null|string $to
      */
-    public function __construct(string $from, string $to)
+    public function __construct(?string $from, ?string $to)
     {
         $this->from = $from;
         $this->to = $to;
@@ -70,9 +70,14 @@ class Airplane
 
     /**
      * @return \TripSorter\Model\Movable\Airplane
+     * @throws IncorrectDataException
      */
     public function build(): \TripSorter\Model\Movable\Airplane
     {
+        if (is_null($this->from) || is_null($this->to) || is_null($this->flightNumber || is_null($this->gate))) {
+            throw new IncorrectDataException('Invalid data');
+        }
+
         $airplane = new \TripSorter\Model\Movable\Airplane($this->from, $this->to, $this->flightNumber, $this->gate, $this->seat);
         foreach ($this->baggage as $baggage) {
             $airplane->addBaggage($baggage);

@@ -48,4 +48,22 @@ class MovableBuilderTest extends TestCase
 
         $this->assertInstanceOf(Airplane::class, $card);
     }
+
+    public function testAirplaneFailed()
+    {
+        $this->expectException(MovableBuilder\IncorrectDataException::class);
+
+        $builder = new MovableBuilder();
+        $card = $builder->byAirplane()
+            ->build();
+    }
+
+    public function testTrainFailed()
+    {
+        $this->expectException(MovableBuilder\IncorrectDataException::class);
+
+        $builder = new MovableBuilder();
+        $card = $builder->byTrain()
+            ->build();
+    }
 }

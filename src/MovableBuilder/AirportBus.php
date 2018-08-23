@@ -8,10 +8,10 @@ class AirportBus
 
     /**
      * AirportBus constructor.
-     * @param string $from
-     * @param string $to
+     * @param null|string $from
+     * @param null|string $to
      */
-    public function __construct(string $from, string $to)
+    public function __construct(?string $from, ?string $to)
     {
         $this->from = $from;
         $this->to = $to;

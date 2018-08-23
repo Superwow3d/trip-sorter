@@ -9,10 +9,10 @@ class Train
 
     /**
      * Train constructor.
-     * @param string $from
-     * @param string $to
+     * @param null|string $from
+     * @param null|string $to
      */
-    public function __construct(string $from, string $to)
+    public function __construct(?string $from, ?string $to)
     {
         $this->from = $from;
         $this->to = $to;
@@ -43,9 +43,13 @@ class Train
 
     /**
      * @return \TripSorter\Model\Movable\Train
+     * @throws IncorrectDataException
      */
     public function build(): \TripSorter\Model\Movable\Train
     {
+        if (is_null($this->from) || is_null($this->to) || is_null($this->trainNumber)) {
+            throw new IncorrectDataException('Invalid data');
+        }
         return new \TripSorter\Model\Movable\Train($this->from, $this->to, $this->seat);
     }
 }
