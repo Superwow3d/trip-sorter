@@ -8,10 +8,9 @@
 
 namespace TripSorter\Model\Movable;
 
-use TripSorter\iDisplayable;
 use TripSorter\Movable;
 
-class Train extends Movable implements iDisplayable
+class Train extends Movable
 {
     private $seat;
 

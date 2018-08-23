@@ -3,9 +3,7 @@
 namespace TripSorter\Model;
 
 
-use TripSorter\iDisplayable;
-
-class Baggage implements iDisplayable
+class Baggage
 {
     private $number;
 
@@ -31,6 +29,6 @@ class Baggage implements iDisplayable
      */
     public function display(): string
     {
-        return 'Baggage drop at ticket counter ' . $this->number;
+        return 'Baggage drop at ticket counter ' . $this->number . '. ';
     }
 }

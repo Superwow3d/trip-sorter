@@ -53,7 +53,7 @@ class Airplane
     public function addBaggage($number): self
     {
         $obj = clone $this;
-        $this->baggage[] = $number;
+        $obj->baggage[] = $number;
         return $obj;
     }
 

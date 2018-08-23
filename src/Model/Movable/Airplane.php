@@ -2,11 +2,10 @@
 
 namespace TripSorter\Model\Movable;
 
-use TripSorter\iDisplayable;
 use TripSorter\Model\Baggage;
 use TripSorter\Movable;
 
-class Airplane extends Movable implements iDisplayable
+class Airplane extends Movable
 {
     private $flightNumber;
     private $seat;

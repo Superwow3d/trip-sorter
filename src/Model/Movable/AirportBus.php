@@ -2,10 +2,9 @@
 
 namespace TripSorter\Model\Movable;
 
-use TripSorter\iDisplayable;
 use TripSorter\Movable;
 
-class AirportBus extends Movable implements iDisplayable
+class AirportBus extends Movable
 {
     private $seat;
 

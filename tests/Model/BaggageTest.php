@@ -20,8 +20,8 @@ class BaggageTest extends TestCase
     public function dataProvider()
     {
         return [
-            ['123', 'Baggage drop at ticket counter 123'],
-            ['AAA', 'Baggage drop at ticket counter AAA']
+            ['123', 'Baggage drop at ticket counter 123. '],
+            ['AAA', 'Baggage drop at ticket counter AAA. ']
         ];
     }
 }
