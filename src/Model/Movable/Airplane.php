@@ -52,6 +52,6 @@ class Airplane extends Movable
             $baggageOutput .= $baggage->display();
         }
         return 'From ' . $this->from . ', take flight ' . $this->flightNumber . ' to ' . $this->to . '. Gate ' . $this->gate . ', seat ' . $this->seat . '.' .
-            ($baggageOutput === '' ? '' : ' ' . $baggageOutput);
+            ($baggageOutput === '' ? ' Baggage will be automatically transferred from you last leg' : ' ' . $baggageOutput);
     }
 }

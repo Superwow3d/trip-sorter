@@ -122,7 +122,7 @@ class SorterTest extends TestCase
         $result = $sorter->sortCards($cards);
 
         $expect = [
-            '1. From Madrid, take flight MAU113 to Barcelona. Gate F, seat 23A.',
+            '1. From Madrid, take flight MAU113 to Barcelona. Gate F, seat 23A. Baggage will be automatically transferred from you last leg',
             '2. Take train from Barcelona to Warsaw. Sit in seat 23A',
             '3. You have arrived at your final destination'
         ];
@@ -147,7 +147,7 @@ class SorterTest extends TestCase
         $result = $sorter->sortCards($cards);
 
         $expect = [
-            '1. From Madrid, take flight MAU113 to Barcelona. Gate F, seat 23A.',
+            '1. From Madrid, take flight MAU113 to Barcelona. Gate F, seat 23A. Baggage will be automatically transferred from you last leg',
             '2. You have arrived at your final destination'
         ];
         $this->assertSame($expect, $result);
@@ -197,7 +197,7 @@ class SorterTest extends TestCase
         $expect = [
             '1. Take train from Pavlodar to Astana. Sit in seat 23A',
             '2. From Astana, take flight 44 to Madrid. Gate T2, seat 23A. Baggage drop at ticket counter 123. Baggage drop at ticket counter 13. ',
-            '3. From Madrid, take flight MAU113 to Barcelona. Gate F, seat 23A.',
+            '3. From Madrid, take flight MAU113 to Barcelona. Gate F, seat 23A. Baggage will be automatically transferred from you last leg',
             '4. Take train from Barcelona to Warsaw. Sit in seat 23A',
             '5. You have arrived at your final destination',
         ];
