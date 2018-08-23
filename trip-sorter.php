@@ -33,9 +33,8 @@ try {
     $builder = new MovableBuilder();
     $cards[] = $builder->setFrom('Pavlodar')
         ->setTo('Astana')
-        ->byTrain()
+        ->byBus()
         ->setSeat('1C')
-        ->setTrainNumber('44')
         ->build();
 } catch (MovableBuilder\IncorrectDataException $e) {}
 

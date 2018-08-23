@@ -39,7 +39,7 @@ Requires  php: >=7.0
 
 ## How to execute
 
-As it was said earlier, you can install the package through the compositor. 
+As it was said earlier, you can install the package through the composer. 
 But if you downloaded the repository, then just run the trip-sorter.php file via composer
 
 ```
@@ -91,9 +91,8 @@ try {
     $builder = new MovableBuilder();
     $cards[] = $builder->setFrom('Pavlodar')
         ->setTo('Astana')
-        ->byTrain()
+        ->byBus()
         ->setSeat('1C')
-        ->setTrainNumber('44')
         ->build();
 } catch (MovableBuilder\IncorrectDataException $e) {}
 
@@ -108,7 +107,7 @@ foreach ($cards as $card) {
 
 This code will output next
 ```
-1. Take train from Pavlodar to Astana. Sit in seat 1C
+1. Take the airport bus from Pavlodar to Astana. Sit in seat 1C
 2. From Astana, take flight 44 to Madrid. Gate T2, seat 12. Baggage drop at ticket counter 123. 
 3. From Madrid, take flight MAU113 to Barcelona. Gate F, seat 44F.
 4. Take train from Barcelona to Warsaw. Sit in seat 23A
