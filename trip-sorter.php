@@ -6,21 +6,20 @@ require  __DIR__ . '/vendor/autoload.php';
 
 $cards = [];
 try {
-    $builder = new MovableBuilder();
-    $cards[] = $builder->setFrom('Madrid')
+    $cards[] = (new MovableBuilder())->setFrom('Madrid')
         ->setTo('Barcelona')
         ->byAirplane()
         ->setSeat('44F')
         ->setFlightNumber('MAU113')
         ->setGate('F')
         ->build();
-    $cards[] = $builder->setFrom('Barcelona')
+    $cards[] = (new MovableBuilder())->setFrom('Barcelona')
         ->setTo('Warsaw')
         ->byTrain()
         ->setSeat('23A')
         ->setTrainNumber('44')
         ->build();
-    $cards[] = $builder->setFrom('Astana')
+    $cards[] = (new MovableBuilder())->setFrom('Astana')
         ->setTo('Madrid')
         ->byAirplane()
         ->setSeat('12')
@@ -28,7 +27,7 @@ try {
         ->addBaggage('123')
         ->setGate('T2')
         ->build();
-    $cards[] = $builder->setFrom('Pavlodar')
+    $cards[] = (new MovableBuilder())->setFrom('Pavlodar')
         ->setTo('Astana')
         ->byBus()
         ->setSeat('1C')

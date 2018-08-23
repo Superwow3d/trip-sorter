@@ -20,15 +20,14 @@ class SorterTest extends TestCase
     {
         $cards = [];
         try {
-            $builder = new MovableBuilder();
-            $cards[] = $builder->setFrom('Madrid')
+            $cards[] = (new MovableBuilder())->setFrom('Madrid')
                 ->setTo('Barcelona')
                 ->byAirplane()
                 ->setSeat('23A')
                 ->setFlightNumber('44')
                 ->setGate('F')
                 ->build();
-            $cards[] = $builder->setFrom('Madrid')
+            $cards[] = (new MovableBuilder())->setFrom('Madrid')
                 ->setTo('Warsaw')
                 ->byTrain()
                 ->setSeat('23A')
@@ -46,15 +45,14 @@ class SorterTest extends TestCase
     {
         $cards = [];
         try {
-            $builder = new MovableBuilder();
-            $cards[] = $builder->setFrom('Madrid')
+            $cards[] = (new MovableBuilder())->setFrom('Madrid')
                 ->setTo('Barcelona')
                 ->byAirplane()
                 ->setSeat('23A')
                 ->setFlightNumber('44')
                 ->setGate('F')
                 ->build();
-            $cards[] = $builder->setFrom('Warsaw')
+            $cards[] = (new MovableBuilder())->setFrom('Warsaw')
                 ->setTo('Barcelona')
                 ->byTrain()
                 ->setSeat('23A')
@@ -72,15 +70,14 @@ class SorterTest extends TestCase
     {
         $cards = [];
         try {
-            $builder = new MovableBuilder();
-            $cards[] = $builder->setFrom('Madrid')
+            $cards[] = (new MovableBuilder())->setFrom('Madrid')
                 ->setTo('Barcelona')
                 ->byAirplane()
                 ->setSeat('23A')
                 ->setFlightNumber('44')
                 ->setGate('F')
                 ->build();
-            $cards[] = $builder->setFrom('Barcelona')
+            $cards[] = (new MovableBuilder())->setFrom('Barcelona')
                 ->setTo('Madrid')
                 ->byTrain()
                 ->setSeat('23A')
@@ -98,15 +95,14 @@ class SorterTest extends TestCase
     {
         $cards = [];
         try {
-            $builder = new MovableBuilder();
-            $cards[] = $builder->setFrom('Madrid')
+            $cards[] = (new MovableBuilder())->setFrom('Madrid')
                 ->setTo('Barcelona')
                 ->byAirplane()
                 ->setSeat('23A')
                 ->setFlightNumber('MAU113')
                 ->setGate('F')
                 ->build();
-            $cards[] = $builder->setFrom('Barcelona')
+            $cards[] = (new MovableBuilder())->setFrom('Barcelona')
                 ->setTo('Warsaw')
                 ->byTrain()
                 ->setSeat('23A')
@@ -129,8 +125,7 @@ class SorterTest extends TestCase
     {
         $cards = [];
         try {
-            $builder = new MovableBuilder();
-            $cards[] = $builder->setFrom('Madrid')
+            $cards[] = (new MovableBuilder())->setFrom('Madrid')
                 ->setTo('Barcelona')
                 ->byAirplane()
                 ->setSeat('23A')
@@ -153,21 +148,20 @@ class SorterTest extends TestCase
     {
         $cards = [];
         try {
-            $builder = new MovableBuilder();
-            $cards[] = $builder->setFrom('Madrid')
+            $cards[] = (new MovableBuilder())->setFrom('Madrid')
                 ->setTo('Barcelona')
                 ->byAirplane()
                 ->setSeat('23A')
                 ->setFlightNumber('MAU113')
                 ->setGate('F')
                 ->build();
-            $cards[] = $builder->setFrom('Barcelona')
+            $cards[] = (new MovableBuilder())->setFrom('Barcelona')
                 ->setTo('Warsaw')
                 ->byTrain()
                 ->setSeat('23A')
                 ->setTrainNumber('44')
                 ->build();
-            $cards[] = $builder->setFrom('Astana')
+            $cards[] = (new MovableBuilder())->setFrom('Astana')
                 ->setTo('Madrid')
                 ->byAirplane()
                 ->setSeat('23A')
@@ -176,7 +170,7 @@ class SorterTest extends TestCase
                 ->addBaggage('13')
                 ->setGate('T2')
                 ->build();
-            $cards[] = $builder->setFrom('Pavlodar')
+            $cards[] = (new MovableBuilder())->setFrom('Pavlodar')
                 ->setTo('Astana')
                 ->byTrain()
                 ->setSeat('23A')
