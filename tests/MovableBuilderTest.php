@@ -24,8 +24,7 @@ class MovableBuilderTest extends TestCase
 
     public function testTrainBuild()
     {
-        $builder = new MovableBuilder();
-        $card = $builder->setFrom('Madrid')
+        $card = (new MovableBuilder())->setFrom('Madrid')
             ->setTo('Barcelona')
             ->byTrain()
             ->setSeat('23A')
@@ -37,8 +36,7 @@ class MovableBuilderTest extends TestCase
 
     public function testAirplaneBuild()
     {
-        $builder = new MovableBuilder();
-        $card = $builder->setFrom('Madrid')
+        $card = (new MovableBuilder())->setFrom('Madrid')
             ->setTo('Barcelona')
             ->byAirplane()
             ->setSeat('23A')
@@ -53,8 +51,7 @@ class MovableBuilderTest extends TestCase
     {
         $this->expectException(MovableBuilder\IncorrectDataException::class);
 
-        $builder = new MovableBuilder();
-        $card = $builder->byAirplane()
+        $card = (new MovableBuilder())->byAirplane()
             ->build();
     }
 
@@ -62,8 +59,7 @@ class MovableBuilderTest extends TestCase
     {
         $this->expectException(MovableBuilder\IncorrectDataException::class);
 
-        $builder = new MovableBuilder();
-        $card = $builder->byTrain()
+        $card = (new MovableBuilder())->byTrain()
             ->build();
     }
 }
