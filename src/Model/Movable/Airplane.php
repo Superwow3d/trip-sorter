@@ -2,10 +2,11 @@
 
 namespace TripSorter\Model\Movable;
 
+use TripSorter\iDisplayable;
 use TripSorter\Model\Baggage;
 use TripSorter\Movable;
 
-class Airplane extends Movable
+class Airplane extends Movable implements iDisplayable
 {
     private $flightNumber;
     private $seat;
@@ -43,13 +44,13 @@ class Airplane extends Movable
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
-    public function output()
+    public function display(): string
     {
         $baggageOutput = '';
         foreach ($this->baggage as $baggage) {
-            $baggageOutput .= $baggage->output();
+            $baggageOutput .= $baggage->display();
         }
         return 'From ' . $this->from . ', take flight ' . $this->flightNumber . ' to ' . $this->to . '. Gate ' . $this->gate . ', seat ' . $this->seat . '.' .
             ($baggageOutput === '' ? '' : ' ' . $baggageOutput);

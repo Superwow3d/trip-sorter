@@ -8,9 +8,10 @@
 
 namespace TripSorter\Model\Movable;
 
+use TripSorter\iDisplayable;
 use TripSorter\Movable;
 
-class Train extends Movable
+class Train extends Movable implements iDisplayable
 {
     private $seat;
 
@@ -28,9 +29,9 @@ class Train extends Movable
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
-    public function output()
+    public function display(): string
     {
         return 'Take train from ' . $this->from . ' to ' . $this->to . '.' .
             ($this->seat !== '' ? ' Sit in seat ' . $this->seat : ' No seat assignment');

@@ -25,24 +25,32 @@ class Airplane
     }
 
     /**
-     * @param string $trainNumber
+     * @param string $flightNumber
      * @return Airplane
      */
-    public function setFlightNumber(string $flightNumber)
+    public function setFlightNumber(string $flightNumber): self
     {
         $obj = clone $this;
         $obj->flightNumber = $flightNumber;
         return $obj;
     }
 
-    public function setGate(string $gate)
+    /**
+     * @param string $gate
+     * @return Airplane
+     */
+    public function setGate(string $gate): self
     {
         $obj = clone $this;
         $obj->gate = $gate;
         return $obj;
     }
 
-    public function addBaggage($number)
+    /**
+     * @param $number
+     * @return Airplane
+     */
+    public function addBaggage($number): self
     {
         $obj = clone $this;
         $this->baggage[] = $number;

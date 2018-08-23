@@ -13,7 +13,7 @@ class BusTest extends TestCase
     public function testPrint($from, $to, $seat, $result)
     {
         $bus = new AirportBus($from, $to, $seat);
-        $this->assertSame($result, $bus->output());
+        $this->assertSame($result, $bus->display());
     }
 
     public function dataProvider()

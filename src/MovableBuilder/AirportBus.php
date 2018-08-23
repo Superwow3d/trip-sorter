@@ -29,6 +29,9 @@ class AirportBus
         return $obj;
     }
 
+    /**
+     * @return \TripSorter\Model\Movable\AirportBus
+     */
     public function build(): \TripSorter\Model\Movable\AirportBus
     {
         return new \TripSorter\Model\Movable\AirportBus($this->from, $this->to, $this->seat);

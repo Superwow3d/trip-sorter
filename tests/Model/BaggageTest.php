@@ -14,7 +14,7 @@ class BaggageTest extends TestCase
     public function testOutput($number, $result)
     {
         $baggage = new Baggage($number);
-        $this->assertSame($result, $baggage->output());
+        $this->assertSame($result, $baggage->display());
     }
 
     public function dataProvider()

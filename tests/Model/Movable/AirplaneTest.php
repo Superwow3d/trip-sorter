@@ -14,7 +14,7 @@ class AirplaneTest extends TestCase
     {
         $airplane = new Airplane($from, $to, $flightNumber, $gate, $seat);
         $airplane->addBaggage($baggage);
-        $this->assertSame($result, $airplane->output());
+        $this->assertSame($result, $airplane->display());
     }
 
     public function dataProvider()

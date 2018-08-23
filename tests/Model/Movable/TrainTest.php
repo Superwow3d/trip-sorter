@@ -13,7 +13,7 @@ class TrainTest extends TestCase
     public function testPrint($from, $to, $seat, $result)
     {
         $train = new Train($from, $to, $seat);
-        $this->assertSame($result, $train->output());
+        $this->assertSame($result, $train->display());
     }
 
     public function dataProvider()
