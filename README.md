@@ -110,3 +110,63 @@ This code will output next
 5. You have arrived at your final destination
 
 ```
+
+## How to extend
+
+API uses **Buildable** interface with method **build** which returns **Movable** class.
+
+For example, you can create transport Horse.
+
+```
+class Horse extends \TripSorter\Movable
+{
+    public function __construct(string $from, string $to)
+    {
+        $this->from = $from;
+        $this->to = $to;
+    }
+
+    public function display(): string
+    {
+        return 'Ride horse from ' . $this->from . ' to ' . $this->to . '.';
+    }
+}
+
+class HorseBuilder implements MovableBuilder\Buildable
+{
+    private $from;
+    private $to;
+
+    public function setFrom(string $from): self
+    {
+        $obj = clone $this;
+        $obj->from = $from;
+        return $obj;
+    }
+
+    /**
+     * @param string $to
+     * @return MovableBuilder
+     */
+    public function setTo(string $to): self
+    {
+        $obj = clone $this;
+        $obj->to = $to;
+        return $obj;
+    }
+
+    public function build(): \TripSorter\Movable
+    {
+        return new Horse($this->from, $this->to);
+    }
+}
+```
+
+And use it
+
+```
+$card = (new HorseBuilder()
+    ->setFrom('Morrowind')
+    ->setTo('Oblivion')
+    ->build();
+```
