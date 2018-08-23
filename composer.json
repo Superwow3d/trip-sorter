@@ -1,4 +1,7 @@
 {
+    "name": "ajaminov/TripSorter",
+    "description": "Demo package for sorting cards.",
+
     "require": {
         "php": ">=7.0"
     },
