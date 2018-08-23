@@ -2,8 +2,12 @@
 
 namespace TripSorter\MovableBuilder;
 
-class Train
+use TripSorter\Movable;
+
+class Train implements Buildable
 {
+    private $from;
+    private $to;
     private $seat;
     private $trainNumber;
 
@@ -42,10 +46,10 @@ class Train
     }
 
     /**
-     * @return \TripSorter\Model\Movable\Train
+     * @return Movable
      * @throws IncorrectDataException
      */
-    public function build(): \TripSorter\Model\Movable\Train
+    public function build(): Movable
     {
         if (is_null($this->from) || is_null($this->to) || is_null($this->trainNumber)) {
             throw new IncorrectDataException('Invalid data');

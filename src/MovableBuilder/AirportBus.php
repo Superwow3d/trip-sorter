@@ -2,8 +2,12 @@
 
 namespace TripSorter\MovableBuilder;
 
-class AirportBus
+use TripSorter\Movable;
+
+class AirportBus implements Buildable
 {
+    private $from;
+    private $to;
     private $seat;
 
     /**
@@ -30,9 +34,9 @@ class AirportBus
     }
 
     /**
-     * @return \TripSorter\Model\Movable\AirportBus
+     * @return Movable
      */
-    public function build(): \TripSorter\Model\Movable\AirportBus
+    public function build(): Movable
     {
         return new \TripSorter\Model\Movable\AirportBus($this->from, $this->to, $this->seat);
     }

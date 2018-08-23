@@ -6,7 +6,7 @@ Also, the journey can not be looped (the departure point coincides with the dest
 
 ## Getting Started
 
-It is possible to install package in composer "ajaminov/trip-sorter",
+It is possible to install package in [composer](https://getcomposer.org/download/) "ajaminov/trip-sorter",
 or just download repository.
 
 ### Installing
@@ -57,7 +57,7 @@ Set seat, transport number and other information.
 
 Method **build** will return you instance of **Movable** class (boarding pass).
 
-Create as many as you like for boarding passes and sort it with method **sortCards** of **\TripSorter\Sorter\Sorter** class, which return array of string.
+Create as many as you like for boarding passes and sort it with method **sortCards** of **\TripSorter\Sorter\Sorter** class, which returns array of string.
 
 For example
 
