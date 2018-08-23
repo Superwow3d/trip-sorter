@@ -32,7 +32,7 @@ composer test
 
 Run in terminal
 ```
-composer require ajaminov/trip-sorter dev
+composer require ajaminov/trip-sorter dev-master
 ```
 
 
