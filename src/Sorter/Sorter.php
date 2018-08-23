@@ -79,12 +79,15 @@ class Sorter
 
     private function output()
     {
+        $counter = 0;
         $output = [];
         foreach ($this->cards as $card) {
-            $output[] = $card->display();
+            $counter++;
+            $output[] = $counter . '. ' . $card->display();
         }
 
-        $output[] = 'You have arrived at your final destination';
+        $counter++;
+        $output[] = $counter . '. ' . 'You have arrived at your final destination';
 
         return $output;
     }

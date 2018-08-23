@@ -1,7 +1,7 @@
 {
     "name": "ajaminov/trip-sorter",
     "description": "Demo package for sorting cards.",
-
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0"
     },
@@ -14,6 +14,7 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit --colors=always"
+        "test": "vendor/bin/phpunit --colors=always",
+        "execute": "php trip-sorter.php"
     }
 }
